@@ -1,0 +1,6 @@
+//Train model
+!yolo detect train data=/data.yaml model=yolo11s.pt epochs=60 imgsz=720
+
+//Test model
+!yolo detect predict model=runs/detect/train/weights/best.pt source=data/validation/images save=True
+
